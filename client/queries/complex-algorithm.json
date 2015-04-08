@@ -1,0 +1,55 @@
+{
+  "query": {
+    "function_score": {
+      "functions": [
+        {
+          "gauss": {
+            "postDate": {
+              "origin": "Wed Apr 08 04:24:39 +0000 2015",
+              "scale": "18h",
+              "offset": "1h",
+              "decay": 0.3
+            }
+          },
+          "weight": 5
+        },
+        {
+          "gauss": {
+            "rank": {
+              "origin": 1000,
+              "offset": 100,
+              "scale": 1
+            }
+          },
+          "weight": 5
+        },
+        {
+          "gauss": {
+            "coordinates": {
+              "origin": {
+                "lat": 39.7469,
+                "lon": -105.2108
+              },
+              "offset": "2km",
+              "scale": "3km"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filter": {
+    "and": {
+      "filters": [
+        {
+          "query": {
+            "query_string": {
+              "default_field": "hashTags",
+              "query": "jobs OR art OR deals OR business OR fun OR women"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

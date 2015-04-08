@@ -2,6 +2,12 @@
 logs
 *.log
 
+# Enviroment File
+.env
+
+# Webstorm Ignore
+.idea
+
 # Runtime data
 pids
 *.pid

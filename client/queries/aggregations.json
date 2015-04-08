@@ -1,0 +1,10 @@
+{
+  "aggregations": {
+    "hashTags_agg": {
+      "terms": {
+        "field": "hashTags",
+        "size": 25
+      }
+    }
+  }
+}

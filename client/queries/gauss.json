@@ -1,0 +1,24 @@
+{
+  "query": {
+    "function_score": {
+      "functions": [
+        {
+          "gauss": {
+            "rank": {
+              "origin": 0,
+              "scale": 20000
+            }
+          }
+        },
+        {
+          "gauss": {
+            "retweet": {
+              "origin": 0,
+              "scale": 20000
+            }
+          }
+        }
+      ]
+    }
+  }
+}

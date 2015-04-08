@@ -1,0 +1,37 @@
+{
+  "query": {
+    "filtered" : {
+      "query" : {
+        "match_all" : {}
+      },
+      "filter" : {
+        "and" : [
+          { "exists" : { "field" : "coordinates" } },
+          {
+            "geo_distance" : {
+              "distance" : "20000km",
+              "coordinates": {
+                "lat":  40.715,
+                "lon": -73.998
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sort": [
+    {
+      "_geo_distance": {
+        "coordinates": {
+          "lat":  40.715,
+          "lon": -73.998
+        },
+        "order":         "asc",
+        "unit":          "km",
+        "distance_type": "plane"
+      }
+    }
+  ]
+}
+

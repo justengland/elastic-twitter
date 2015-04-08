@@ -1,0 +1,63 @@
+
+{
+  "query": {
+    "function_score": {
+      "query": {
+        "bool": {
+          "should": [
+            {
+              "common": {
+                "message": {
+                  "query": "cool",
+                  "cutoff_frequency": 0.001,
+                  "low_freq_operator": "and"
+                }
+              }
+            },
+            {
+              "prefix": {
+                "title": "cool"
+              }
+            },
+            {
+              "match_phrase_prefix": {
+                "title": {
+                  "query": "cool",
+                  "slop": 10
+                }
+              }
+            }
+          ]
+        }
+      },
+      "functions": [
+        {
+          "filter": {
+            "type": {
+              "value": "doctor"
+            }
+          },
+          "boost_factor": 3
+        },
+        {
+          "filter": {
+            "type": {
+              "value": "place"
+            }
+          },
+          "boost_factor": 2
+        },
+        {
+          "filter": {
+            "type": {
+              "value": "article"
+            }
+          },
+          "boost_factor": 1
+        }
+      ],
+      "score_mode": "first",
+      "boost_mode": "multiply"
+    }
+  }
+}

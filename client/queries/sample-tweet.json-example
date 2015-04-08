@@ -1,0 +1,150 @@
+{
+  "created_at": "Sun Apr 05 16:39:59 +0000 2015",
+  "id": 584757385664847900,
+  "id_str": "584757385664847872",
+  "text": "We still get baskets 😛💕 http://t.co/cGHEAtw3uF",
+  "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 1942098132,
+    "id_str": "1942098132",
+    "name": "16super_",
+    "screen_name": "_Lovelyrose_",
+    "location": "NewJersey",
+    "url": null,
+    "description": "dont save her",
+    "protected": false,
+    "verified": false,
+    "followers_count": 72,
+    "friends_count": 67,
+    "listed_count": 0,
+    "favourites_count": 1070,
+    "statuses_count": 1573,
+    "created_at": "Sun Oct 06 21:48:32 +0000 2013",
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": false,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_tile": false,
+    "profile_link_color": "DF91E6",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/577870362198814720/bUEXVH21_normal.jpeg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/577870362198814720/bUEXVH21_normal.jpeg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/1942098132/1427557699",
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": null,
+    "follow_request_sent": null,
+    "notifications": null
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "trends": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "id": 584757369755668500,
+        "id_str": "584757369755668480",
+        "indices": [
+          24,
+          46
+        ],
+        "media_url": "http://pbs.twimg.com/media/CB15usgUEAATtyv.jpg",
+        "media_url_https": "https://pbs.twimg.com/media/CB15usgUEAATtyv.jpg",
+        "url": "http://t.co/cGHEAtw3uF",
+        "display_url": "pic.twitter.com/cGHEAtw3uF",
+        "expanded_url": "http://twitter.com/_Lovelyrose_/status/584757385664847872/photo/1",
+        "type": "photo",
+        "sizes": {
+          "small": {
+            "w": 340,
+            "h": 255,
+            "resize": "fit"
+          },
+          "medium": {
+            "w": 600,
+            "h": 450,
+            "resize": "fit"
+          },
+          "thumb": {
+            "w": 150,
+            "h": 150,
+            "resize": "crop"
+          },
+          "large": {
+            "w": 1024,
+            "h": 768,
+            "resize": "fit"
+          }
+        }
+      }
+    ]
+  },
+  "extended_entities": {
+    "media": [
+      {
+        "id": 584757369755668500,
+        "id_str": "584757369755668480",
+        "indices": [
+          24,
+          46
+        ],
+        "media_url": "http://pbs.twimg.com/media/CB15usgUEAATtyv.jpg",
+        "media_url_https": "https://pbs.twimg.com/media/CB15usgUEAATtyv.jpg",
+        "url": "http://t.co/cGHEAtw3uF",
+        "display_url": "pic.twitter.com/cGHEAtw3uF",
+        "expanded_url": "http://twitter.com/_Lovelyrose_/status/584757385664847872/photo/1",
+        "type": "photo",
+        "sizes": {
+          "small": {
+            "w": 340,
+            "h": 255,
+            "resize": "fit"
+          },
+          "medium": {
+            "w": 600,
+            "h": 450,
+            "resize": "fit"
+          },
+          "thumb": {
+            "w": 150,
+            "h": 150,
+            "resize": "crop"
+          },
+          "large": {
+            "w": 1024,
+            "h": 768,
+            "resize": "fit"
+          }
+        }
+      }
+    ]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": false,
+  "filter_level": "low",
+  "lang": "en",
+  "timestamp_ms": "1428251999666"
+}

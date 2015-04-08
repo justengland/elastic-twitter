@@ -1,0 +1,46 @@
+{
+  "script_fields": {
+    "distance": {
+      "params": {
+        "lat": 47.1,
+        "lon": 8.1
+      },
+      "script": "doc['coordinates'].distanceInKm(lat,lon)"
+    }
+  },
+  "query": {
+    "function_score": {
+      "functions": [
+        {
+          "gauss": {
+            "coordinates": {
+              "origin": {
+                "lat": 39.7469,
+                "lon": -105.2108
+              },
+              "offset": "500miles",
+              "scale": "10miles"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filter": {
+    "and": {
+      "filters": [
+        {
+          "query": {
+            "filtered": {
+              "filter": {
+                "exists": {
+                  "field": "coordinates"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+extends layout
+
+block content
+  h1 SearchTwit
+  p A sample of how to use Elastic(search) while using the twitter data stream. The example is used to show how to perform boosting, wieghting and sorting.
+
+  .row
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title Example Elastic Querys
+      .panel-body
+        .row
+          .dropdown.col-md-2
+            button#dropdownMenu1.btn.btn-default(type="button", data-toggle="dropdown")
+              span.text Load Sample Query
+              span.caret
+            ul#jsonFileList.dropdown-menu(role="menu")
+              each item in files
+                li(role="presentation")
+                  a.queryItem(href=item.source)=item.display
+            button#run.btn.btn-default run
+        .row
+          #query.aceEditor just some test
+  .row
+    ul#results.list-group
+
+
+  template#searchResult
+    li.list-group-item.row
+      .col-md-4
+        h3.user
+        p.message
+        span.tags
+        span.mentions
+      .col-md-4
+        .score
+        .coordinates
+        .sort
+        .retweet
+        .rank
+        .favorite
+
+  template#queryResult
+    li.list-group-item.row
+      h3 Query Metrics
+      span.took
+      span
+
+  template#errorResult
+    li.list-group-item.row
+      h3 Error
+      p.message
+
+
+
+
+
+block scripts
+  script(src='//cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js')
+  script(src='/javascripts/home.js')
+
+<button id="dropdownMenu1" type="button" data-toggle="sample-query-dropdown" aria-expanded="true" class="btn btn-default dropdown-toggle">Load Sample Query</button>
+
+<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">
+Dropdown
+<span class="caret"></span>
+</button>

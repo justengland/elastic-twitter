@@ -1,0 +1,24 @@
+{
+  "query": {
+    "filtered" : {
+      "query" : {
+        "match_all" : {}
+      },
+      "filter" : {
+        "and" : [
+          { "exists" : { "field" : "coordinates" } },
+          {
+            "geo_distance" : {
+              "distance" : "20000km",
+              "coordinates" : {
+                "lat" : 40,
+                "lon" : -70
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
