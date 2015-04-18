@@ -102,6 +102,8 @@ var home = (function() {
 
         var data = JSON.parse(source);
 
+        console.log("request size: ", source.length);
+
         $.ajax ({
             type: 'POST',
             contentType: 'application/json',
