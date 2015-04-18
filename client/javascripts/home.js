@@ -78,7 +78,8 @@ var home = (function() {
     function tempateHit(hit) {
         var template = document.querySelector('#searchResult').content.cloneNode(true);
         template.querySelector('.user').textContent = "@" + hit._source.user;
-        template.querySelector('.message').textContent = hit._source.message;
+        template.querySelector('.id').textContent = "user id: " + hit._source.id;
+        template.querySelector('.message').textContent = hit._source.message + " userid: " + hit._source.id;
         template.querySelector('.tags').textContent = displayArray("hashTags",  "#", hit._source.hashTags);
         template.querySelector('.mentions').textContent = displayArray("mentions",  "@", hit._source.mentions);
         template.querySelector('.score').textContent = "score: " + hit._score;
