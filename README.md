@@ -3,6 +3,7 @@ A sample search app using node, express, elastic search twitter
 
 ## Kibanna Dashboard
 https://gist.github.com/cfe5c785b09543f6edca
+https://elastic-twitter-2938389572-us-east-1.k4s.bonsaiapps.net
 
 ## Setup Enviroment WebServer
 1. Clone or Fork from Github
@@ -28,3 +29,9 @@ https://www.found.no/foundation/function-scoring/ - Trending Scoring Algorithm
 https://www.found.no/pricing/#pricing/availability_zones=2&capacity=1024&region=us-east-1&ssd=true Found.no is owned by elastic, but its pricey
 http://www.elastic.co/guide/en/elasticsearch/guide/master/decay-functions.html - More Algorithm
 http://www.elastic.co/guide/en/elasticsearch/guide/master/boosting-by-popularity.html
+
+
+## Elastic URLS
+List indies https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/_cat/indices?v
+
+basic query https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/twitter/_search?q=*
