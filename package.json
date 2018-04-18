@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server/www",
+    "elastic:ping": "node ./indexer/ping",
     "elastic:create": "node ./indexer/createIndex",
     "elastic:index": "node ./indexer/feeder",
     "dev:server": "node ./server/www",

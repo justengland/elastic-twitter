@@ -1,18 +1,12 @@
-var elasticQuery = exports = module.exports = {};
-var elasticsearch = require('elasticsearch');
-var tweetIndex = "tweets";
+const elasticQuery = exports = module.exports = {};
+const client = require('../../lib/elasticClient');
+const {TWITTER_INDEX, TWEET_TYPE} = require('../../lib/elasticClient');
 
 elasticQuery.query = function(query) {
-    var client = new elasticsearch.Client({
-        host: process.env.ElasticSearch_HOST,
-        log: 'trace'
-    });
     return client.search({
-        index: tweetIndex,
-        type: 'tweet',
+        index: TWITTER_INDEX,
+        type: TWEET_TYPE,
         body: query
     })
 };
-
-
 

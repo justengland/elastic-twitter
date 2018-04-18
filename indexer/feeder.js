@@ -2,7 +2,7 @@ var batcher = exports = module.exports = {};
 
 require('dotenv').load();
 
-var client = require('./../elasticClient');
+var client = require('../lib/elasticClient');
 var twitterText = require('twitter-text');
 var tweetIndex = "twitter";
 
@@ -14,7 +14,7 @@ batcher.batchTweets = function(tweets, onComplete) {
     var body = [];
 
     function onBulkComplete(data) {
-        console.log(data);
+        console.log(`tweets batched: ${body.length}`);
     }
 
     tweets.forEach(function(ele) {
@@ -103,11 +103,11 @@ twit.stream('statuses/sample', {language: 'en'}, function(stream) {
     stream.on('data', function(data) {
 
         if(!data.delete) {
-            //console.log("------------------------------");
-            //console.log(" DATA ");
-            //console.log("------------------------------");
-            //console.log(JSON.stringify(data, 0, 4));
-            //console.log();
+            // console.log("------------------------------");
+            // console.log(" DATA ");
+            // console.log("------------------------------");
+            // console.log(JSON.stringify(data, 0, 4));
+            // console.log();
 
             var trimmedTweet = mapTweet(data);
             // console.log(trimmedTweet);

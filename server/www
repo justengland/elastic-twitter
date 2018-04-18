@@ -3,11 +3,10 @@
 /**
  * Module dependencies.
  */
-
+require('dotenv').load();
 var app = require('../app');
 var debug = require('debug')('searchtwit:server');
 var http = require('http');
-require('dotenv').load();
 
 /**
  * Get port from environment and store in Express.

@@ -1,8 +1,9 @@
 // Create the index, caution it this will remove all data.
 require('dotenv').load();
 
-const client = require('./../elasticClient');
-const INDEX = {index: 'twitter'}
+const client = require('../lib/elasticClient');
+const {TWITTER_INDEX, TWEET_TYPE} = require('../lib/elasticClient');
+const INDEX = {index: TWITTER_INDEX}
 
 // Delete index
 client.indices.delete(INDEX, (deleteError, response) => {
@@ -17,7 +18,7 @@ client.indices.delete(INDEX, (deleteError, response) => {
 
         const mappingParameters = {
             ...INDEX,
-            type: 'tweet',
+            type: TWEET_TYPE,
             body: {
                 properties: {
                     id : { "type" : "long" },

@@ -4,7 +4,7 @@
 // client.indices.create([params, [callback]])
 require('dotenv').load();
 
-var client = require('./../elasticClient');
+var client = require('../lib/elasticClient');
 
 // Setup tweet Index
 var tweetIndex = "tweets";
