@@ -1,8 +1,13 @@
 Helpful Blog
 http://jontai.me/blog/2013/01/advanced-scoring-in-elasticsearch/
 
+This query is failing due to elastic DSL changes
+
 Scoring:
   createDate < 1d * 10 || createDate < 1w * 1 || createDate < 1m *.5 || createDate older *.1
   retweets * 100
   favorites * 50
   rank * 1
+
+
+

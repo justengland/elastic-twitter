@@ -22,10 +22,10 @@ client.indices.delete(INDEX, (deleteError, response) => {
       body: {
         properties: {
           id: {'type': 'long'},
-          user: {'type': 'text'},
+          user: {'type': 'text', 'fielddata': true},
           message: {'type': 'text'},
-          hashTags: {'type': 'text'},
-          mentions: {'type': 'text'},
+          hashTags: {'type': 'text', 'fielddata': true},
+          mentions: {'type': 'text', 'fielddata': true},
           postDate: {'type': 'date', 'format': 'EE MMM d HH:mm:ss Z yyyy'},
           timestamp: {'type': 'long'},
           location: {'type': 'long'},
