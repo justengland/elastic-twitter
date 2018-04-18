@@ -4,7 +4,7 @@ require('dotenv').load();
 
 var client = require('./../elasticClient');
 var twitterText = require('twitter-text');
-var tweetIndex = "tweets";
+var tweetIndex = "twitter";
 
 function onError(e) {
     throw e;
