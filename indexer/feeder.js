@@ -64,10 +64,10 @@ function clone (obj) {
 
 var twitter = require('twitter')
 var twit = new twitter({ // eslint-disable-line new-cap
-  consumer_key: '7bAXkNmmxmfHBnTH1OdiVI6MM',
-  consumer_secret: 'S17BLWJYWCrebH5CTS70Y7wVeE7kKQoY3pCBISJLDPPy033kPH',
-  access_token_key: '82012123-LfoNvcBk3ooKCjJ7sArwdReqzFHvCeQmmJi5Y0b3H',
-  access_token_secret: 'WAcvz6bGOPYGonEYkyOW73cw59hcRVC57MipKVRqKoI8B'
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 })
 
 function mapTweet (source) {
