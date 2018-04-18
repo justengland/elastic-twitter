@@ -23,10 +23,10 @@ TWITTER_ACCESS_TOKEN_SECRET=XXXXXXXXXXXX
 npm start
 
 ## Start Indexer
-node ./indexer/feeder.js
+npm run elastic:index
 
 ## Recreate Elastic Index - warning deletes all data!!!!
-node ./indexer/setupCore.js
+npm run elastic:create
 
 ## Sense - Elastic Search IDE
 https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=en
@@ -39,8 +39,6 @@ https://www.found.no/pricing/#pricing/availability_zones=2&capacity=1024&region=
 http://www.elastic.co/guide/en/elasticsearch/guide/master/decay-functions.html - More Algorithm
 http://www.elastic.co/guide/en/elasticsearch/guide/master/boosting-by-popularity.html
 
-
 ## Elastic URLS
-List indies https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/_cat/indices?v
-
-basic query https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/twitter/_search?q=*
+List indies: https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/_cat/indices?v
+basic query: https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/twitter/_search?q=*
