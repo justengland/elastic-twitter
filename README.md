@@ -39,7 +39,8 @@ https://www.found.no/pricing/#pricing/availability_zones=2&capacity=1024&region=
 http://www.elastic.co/guide/en/elasticsearch/guide/master/decay-functions.html - More Algorithm
 http://www.elastic.co/guide/en/elasticsearch/guide/master/boosting-by-popularity.html
 https://bonsai.io/ - Free elastic hosting
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html - Docker local for Elastic
 
 ## Elastic URLS
-List indies: https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/_cat/indices?v
-basic query: https://twitter-sandbox-3780054794.us-east-1.bonsaisearch.net/twitter/_search?q=*
+List indies: https://your-elastic-server.com/_cat/indices?v
+basic query: https://your-elastic-server.com/twitter/_search?q=*
