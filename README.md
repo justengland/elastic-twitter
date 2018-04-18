@@ -1,6 +1,8 @@
 # searchtwit
 A sample search app using node, express, elastic search twitter
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ## Kibanna Dashboard
 https://gist.github.com/cfe5c785b09543f6edca
 https://elastic-twitter-2938389572-us-east-1.k4s.bonsaiapps.net

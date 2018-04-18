@@ -1,8 +1,6 @@
-var router = exports = module.exports = {};
-var homeRoute = require('./index');
+var router = exports = module.exports = {}
+var homeRoute = require('./index')
 
-router.setup = function(app) {
-    app.use('/', homeRoute);
+router.setup = function (app) {
+  app.use('/', homeRoute)
 }
-
-
