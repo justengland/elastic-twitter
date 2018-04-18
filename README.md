@@ -10,7 +10,14 @@ https://elastic-twitter-2938389572-us-east-1.k4s.bonsaiapps.net
 ## Setup Enviroment WebServer
 1. Clone or Fork from Github
 1. npm install
-1. setup .env file ElasticSearch_HOST=https://your-elastic-server.com
+1. setup .env file 
+```
+ELASTIC_HOST=https://your-elastic-server.com
+TWITTER_CONSUMER_KEY=XXXXXX
+TWITTER_CONSUMER_SECRET=XXXXXXXXXXXX
+TWITTER_ACCESS_TOKEN_KEY=XXXXXXXXXXXX
+TWITTER_ACCESS_TOKEN_SECRET=XXXXXXXXXXXX
+```
 
 ## Start Web Server
 npm start
