@@ -2,13 +2,9 @@
   "query": {
     "match_all": {}
   },
-  "filter": {
-    "range": {
-      "postDate": {
-        "gte": "Sat Apr 04 16:40:14 +0000 2015",
-        "lte": "now"
-      }
+  "sort": {
+    "postDate": {
+      "order": "desc"
     }
-  },
-  "sort": { "postDate": { "order": "desc" }}
+  }
 }

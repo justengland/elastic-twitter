@@ -19,10 +19,14 @@ TWITTER_ACCESS_TOKEN_KEY=XXXXXXXXXXXX
 TWITTER_ACCESS_TOKEN_SECRET=XXXXXXXXXXXX
 ```
 
-## Start Web Server
-npm start
 
-## Start Indexer
+## Start Web Server - run in one terminal
+npm run dev:server
+
+## Start Webpack - run in another terminal
+npm run dev:webpack
+
+## Start Indexer - only need to load data
 npm run elastic:index
 
 ## Recreate Elastic Index - warning deletes all data!!!!

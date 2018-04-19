@@ -6,7 +6,10 @@ var bodyParser = require('body-parser')
 var router = require('./server/routes/router')
 
 var app = express()
-
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json({limit: "50mb"}));
 // view engine setup
 app.set('views', path.join(__dirname, './server/views'))
 app.set('view engine', 'jade')
@@ -14,8 +17,7 @@ app.set('view engine', 'jade')
 // uncomment after placing your favicon in /public
 // app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'))
-app.use(bodyParser.json({limit: '10mb'}))
-app.use(bodyParser.urlencoded({ extended: false }))
+
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'client')))
 

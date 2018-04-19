@@ -9,7 +9,7 @@ function onError (res, e) {
 }
 
 // home pagejust some test
-router.get('/', function (req, res, next) {
+router.get('/legacy', function (req, res, next) {
   queries.getAll()
     .then(function (data) {
       res.render('index', { title: 'Express', files: data })
@@ -17,7 +17,33 @@ router.get('/', function (req, res, next) {
     .catch(function (e) { onError(res, e) })
 })
 
+// home pagejust some test
+router.get('/', function (req, res, next) {
+  res.sendFile('./client/index.html')
+})
+
+
+// Queries
+router.get('/api/queries/', function (req, res, next) {
+  queries.getAll()
+    .then(function (data) {
+      res.json(data)
+    })
+    .catch(function (e) { onError(res, e) })
+})
+
 // result
+router.post('/api/queries/exec', function (req, res) {
+  console.log('query:: ', req.body)
+
+  elasticQuery.query(req.body)
+    .then(function (data) {
+      res.json(data)
+    })
+    .catch(function (e) { onError(res, e) })
+})
+
+// TODO: Remove
 router.post('/ajax/run-query', function (req, res, next) {
   console.log('query:: ', req.body)
 
