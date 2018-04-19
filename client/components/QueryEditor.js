@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import AceEditor from 'react-ace'
-import Resizable from 're-resizable'
 import * as queries from '../data/queries'
 import 'brace/mode/json'
 import 'brace/theme/monokai'

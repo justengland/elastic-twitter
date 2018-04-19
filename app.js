@@ -8,8 +8,8 @@ var router = require('./server/routes/router')
 var app = express()
 app.use(bodyParser.urlencoded({
   extended: true
-}));
-app.use(bodyParser.json({limit: "50mb"}));
+}))
+app.use(bodyParser.json({limit: '50mb'}))
 // view engine setup
 app.set('views', path.join(__dirname, './server/views'))
 app.set('view engine', 'jade')

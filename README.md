@@ -32,6 +32,9 @@ npm run elastic:index
 ## Recreate Elastic Index - warning deletes all data!!!!
 npm run elastic:create
 
+## Demo
+https://elastic-twitter.herokuapp.com/
+
 ## Sense - Elastic Search IDE
 https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=en
 

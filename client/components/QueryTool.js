@@ -34,7 +34,6 @@ export default class QueryTool extends Component {
   }
 
   render () {
-
     return (
       <div className='pull-left'>
         <h1 style={{marginLeft: '10px'}}>Elastic Search Demo</h1>

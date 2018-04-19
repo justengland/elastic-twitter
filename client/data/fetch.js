@@ -24,27 +24,26 @@ export async function fetchJson (url, body) {
             } catch (e) {
               const parsedError = parseErrorHtml(data)
               console.warn('Error With Fetch', parsedError)
-              return reject(parsedError);
+              return reject(parsedError)
             }
           }).catch(error => {
             console.warn('Error Parsing Error Response', error)
-            reject(new Error(`Server error: ${res.statusText}: ${res.status}`));
+            reject(new Error(`Server error: ${res.statusText}: ${res.status}`))
           })
         }
       })
       .catch(err => {
         throw err
       })
-
   })
 }
 
-function parseErrorHtml(html) {
-  var tmp = document.createElement("DIV");
-  tmp.innerHTML = html;
+function parseErrorHtml (html) {
+  var tmp = document.createElement('DIV')
+  tmp.innerHTML = html
 
-  const name = tmp.getElementsByTagName("H1")[0].innerText;
-  const message = tmp.getElementsByTagName("PRE")[0].innerText
+  const name = tmp.getElementsByTagName('H1')[0].innerText
+  const message = tmp.getElementsByTagName('PRE')[0].innerText
 
   const error = new Error(message)
   error.name = name

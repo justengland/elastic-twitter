@@ -22,7 +22,6 @@ router.get('/', function (req, res, next) {
   res.sendFile('./client/index.html')
 })
 
-
 // Queries
 router.get('/api/queries/', function (req, res, next) {
   queries.getAll()

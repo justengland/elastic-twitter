@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react'
-import { ListGroup, ListGroupItem, Grid, Row, Col } from 'react-bootstrap'
+import { ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap'
 import * as queries from '../data/queries'
 import ErrorAlert from './ErrorAlert'
 
@@ -37,7 +37,7 @@ export default class QueryList extends Component {
 
   renderResult (result) {
     const {_id, _score, _source} = result
-    const {mentions, user, hashTags, postDate, message, rank, retweet } = _source
+    const {mentions, user, hashTags, postDate, message, rank, retweet} = _source
     const favoriteCount = _source.favorite_count
     return (
       <ListGroupItem key={_id}>
