@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import {all} from '../data/queries'
 import {ListGroup, ListGroupItem} from 'react-bootstrap'
 
@@ -30,9 +30,12 @@ class QueryList extends Component {
   render () {
     const {queries} = this.state
     return (
-      <ListGroup style={{overflow: 'auto', maxHeight: '400px'}}>
-        {queries.map(query => <ListGroupItem key={query.display} value={query.source} onClick={this.handleListItemClick}>{query.display}</ListGroupItem>)}
-      </ListGroup>
+      <Fragment>
+        <h4>Select a query</h4>
+        <ListGroup style={{overflow: 'auto', maxHeight: '400px'}}>
+          {queries.map(query => <ListGroupItem key={query.display} value={query.source} onClick={this.handleListItemClick}>{query.display}</ListGroupItem>)}
+        </ListGroup>
+      </Fragment>
     )
   }
 }

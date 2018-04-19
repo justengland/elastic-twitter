@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component, Fragment } from 'react'
 import AceEditor from 'react-ace'
 import Resizable from 're-resizable'
 import * as queries from '../data/queries'
@@ -25,7 +25,8 @@ export default class QueryEditor extends Component {
 
   render () {
     return (
-      <Resizable>
+      <Fragment>
+        <h4>Edit Query</h4>
         <AceEditor
           mode='json'
           theme='monokai'
@@ -36,7 +37,7 @@ export default class QueryEditor extends Component {
           width='600px'
           value={this.state.value}
         />
-      </Resizable>
+      </Fragment>
     )
   }
 }
