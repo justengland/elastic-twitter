@@ -26,7 +26,7 @@ npm run dev:server
 ## Start Webpack - run in another terminal
 npm run dev:webpack
 
-## Start Indexer - only need to load data
+## Start Indexer - only needed to load data
 npm run elastic:index
 
 ## Recreate Elastic Index - warning deletes all data!!!!
