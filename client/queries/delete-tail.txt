@@ -1,0 +1,20 @@
+Use this to delete the oldest docs, you can run it as a query to test it
+
+
+POST twitter/_doc/_delete_by_query?conflicts=proceed
+{
+  "sort": [
+    {
+      "postDate": {
+        "order": "asc"
+      }
+    }
+  ],
+  "query": {
+    "range": {
+      "postDate": {
+        "lte": "Wed Apr 18 18:33:00 +0000 2018"
+      }
+    }
+  }
+}

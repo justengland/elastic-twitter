@@ -1,0 +1,16 @@
+{
+  "sort": [
+    {
+      "postDate": {
+        "order": "asc"
+      }
+    }
+  ],
+  "query": {
+    "range": {
+      "postDate": {
+        "lte": "Wed Apr 18 18:33:00 +0000 2018"
+      }
+    }
+  }
+}
